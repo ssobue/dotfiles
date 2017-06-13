@@ -1,0 +1,27 @@
+#### Bash Settings written by Sho Sobue
+## Load Setting files
+# Environment Variables
+[ -f ~/.bash_env ] && source ~/.bash_env
+
+# Settings for function
+[ -f ~/.bash_function ] && source ~/.bash_function
+
+# Share Bash History
+[ -f ~/.bash_sharehistory ] && source ~/.bash_sharehistory
+
+# Aliases
+[ -f ~/.bash_alias ] && source ~/.bash_alias
+
+# Colors
+[ -f ~/.bash_color ] && source ~/.bash_color
+
+## Load Bash Completion
+[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+
+# Prompt
+export PS1="${P_GREEN}[\u@\h \w\$(__git_ps1)]\$ ${P_WHITE}"
+
+# Settings for local machine
+[ -f ~/.bash_localhost ] && source ~/.bash_localhost
+
+# vim:ts=4:sw=4 syntax=bash

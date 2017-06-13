@@ -1,0 +1,15 @@
+#### Bash Settings written by ssobue
+## Load Setting files
+# Aliases
+[ -f ~/.bash_alias ] && source ~/.bash_alias
+
+# Colors
+[ -f ~/.bash_color ] && source ~/.bash_color
+
+# Prompt
+export PS1="${P_GREEN}[\u@\h \w]\$ ${P_WHITE}"
+
+# Settings for local machine
+[ -f ~/.bash_localhost ] && source ~/.bash_localhost
+
+# vim:ts=4:sw=4 syntax=bash

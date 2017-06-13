@@ -1,0 +1,27 @@
+#### Bash Settings written by ssobue
+## Load Setting files
+# Settings for function
+[ -f ~/.bash_function ] && source ~/.bash_function
+
+# Share Bash History
+[ -f ~/.bash_sharehistory ] && source ~/.bash_sharehistory
+
+# Aliases
+[ -f ~/.bash_alias ] && source ~/.bash_alias
+
+# Colors
+[ -f ~/.bash_color ] && source ~/.bash_color
+
+# Bash Completion
+[ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion 
+
+# Git Prompt (for CentOS)
+[ -f /usr/share/doc/git-*/contrib/completion/git-prompt.sh ] && source /usr/share/doc/git-*/contrib/completion/git-prompt.sh
+
+# Prompt
+export PS1="${P_SKY}[\u@\h \w\$(__git_ps1)]\$ ${P_WHITE}"
+
+# Settings for local machine
+[ -f ~/.bash_localhost ] && source ~/.bash_localhost
+
+# vim:ts=4:sw=4 syntax=bash

@@ -1,0 +1,15 @@
+#### Functions
+# convert unix time
+function unixtime {
+    if [ -z $1 ]
+    then
+        date "+%s"
+    else
+        date -r "$1"
+    fi
+}
+
+# display top processes with changing title bar
+function top {
+    command top
+}

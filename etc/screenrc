@@ -1,0 +1,29 @@
+autodetach on
+activity on
+crlf off
+defkanji on
+deflogin on
+startup_message off
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+defscrollback 10000
+ 
+#termcapinfo xterm* Z0=\E[?3h:Z1=\E[?3l:is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l
+#termcapinfo xterm* OL=100
+#termcapinfo xterm* 'VR=\E[?5h:VN=\E[?5l'
+#termcapinfo xterm* 'k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~'
+#termcapinfo xterm* 'kh=\EOH:kI=\E[2~:kD=\E[3~:kH=\EOF:kP=\E[5~:kN=\E[6~'
+#termcapinfo xterm* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+termcapinfo xterm* ti@:te@
+
+altscreen on
+
+termcapinfo linux C8
+ 
+hardstatus alwayslastline "%`%-w%{=b bw}%n %t%{-}%+w %= [%l] [%Y-%m-%d %c:%s]"
+caption always "%{=u dc} %="
+ 
+escape ^Z^Z
+defencoding utf8
+
