@@ -1,2 +1,0 @@
-## Environment Variable
-export PATH="/opt/java/bin:${PATH}"

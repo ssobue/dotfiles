@@ -15,7 +15,7 @@
 # Colors
 [ -f ~/.bash_color ] && source ~/.bash_color
 
-## Load Bash Completion
+## Load Bash Completion(for Homebrew)
 [ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
 # Prompt
