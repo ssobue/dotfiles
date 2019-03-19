@@ -8,3 +8,5 @@ function share_history {
 PROMPT_COMMAND='share_history'
 shopt -u histappend
 export HISTSIZE=10000
+
+# vim:ts=4:sw=4 syntax=bash

@@ -16,3 +16,11 @@
 	program = /usr/local/bin/gpg
 [commit]
 	gpgsign = true
+[alias]
+	open = browse-remote
+	open-pr = browse-remote --pr
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

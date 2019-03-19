@@ -1,3 +1,5 @@
 ## Environment Variable
 export EDITOR=vim
 export GIT_EDITOR=vim
+
+# vim:ts=4:sw=4 syntax=bash

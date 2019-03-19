@@ -19,7 +19,7 @@
 [ -f /usr/share/doc/git-*/contrib/completion/git-prompt.sh ] && source /usr/share/doc/git-*/contrib/completion/git-prompt.sh
 
 # Prompt
-export PS1="${P_SKY}[\u@\h \w\$(__git_ps1)]\$ ${P_WHITE}"
+export PS1="${P_YELLOW}[\u@\h \w\$(__git_ps1)]\$ \[\e[m\]"
 
 # Settings for local machine
 [ -f ~/.bash_localhost ] && source ~/.bash_localhost

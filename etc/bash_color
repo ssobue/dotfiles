@@ -7,3 +7,5 @@ P_YELLOW="\[\033[33m\]"
 P_BLUE="\[\033[34m\]"
 P_PURPLE="\[\033[35m\]"
 P_SKY="\[\033[36m\]"
+
+# vim:ts=4:sw=4 syntax=bash

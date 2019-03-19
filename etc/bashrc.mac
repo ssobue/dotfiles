@@ -19,7 +19,7 @@
 [ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
 # Prompt
-export PS1="${P_GREEN}[\u@\h \w\$(__git_ps1)]\$ ${P_WHITE}"
+export PS1="${P_GREEN}[\u@\h \w\$(__git_ps1)]\$ \[\e[m\]"
 
 # Settings for local machine
 [ -f ~/.bash_localhost ] && source ~/.bash_localhost
