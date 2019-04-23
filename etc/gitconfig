@@ -8,6 +8,7 @@
 	pushinsteadof = https://github.com/
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = ~/.gitignore_global
 [color]
 	diff = auto
 	status = auto
@@ -16,6 +17,7 @@
 	program = /usr/local/bin/gpg
 [commit]
 	gpgsign = true
+	template = ~/.stCommitMsg
 [alias]
 	open = browse-remote
 	open-pr = browse-remote --pr
@@ -24,3 +26,9 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
