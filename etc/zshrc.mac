@@ -1,0 +1,83 @@
+# zsh setting
+
+# DEFAULT {{{
+if [ -e /etc/zshrc ]; then
+    source /etc/zshrc
+fi
+# }}}
+
+bindkey -e
+stty erase "^?"
+
+# 色を使用
+autoload -Uz colors
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+colors
+
+# 補完
+autoload -Uz compinit
+compinit
+
+# 日本語ファイル名を表示可能にする
+setopt print_eight_bit
+
+# 他のターミナルとヒストリーを共有
+setopt share_history
+setopt hist_ignore_dups
+setopt pushd_ignore_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# cdコマンドを省略して、ディレクトリ名のみの入力で移動
+setopt auto_cd
+
+# 自動でpushdを実行
+setopt auto_pushd
+
+# pushdから重複を削除
+setopt pushd_ignore_dups
+
+# コマンドミスを修正
+setopt correct
+
+# PROMPT {{{
+PROMPT='%F{green}%n@%m'
+RPROMPT='%B%F{green}[%d]%f%b'
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+PROMPT=$PROMPT'${vcs_info_msg_0_}'' %F{green}%#%f '
+# }}}
+
+# ALIASES {{{
+alias date="env LC_ALL=c date"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
+alias du='du -hc '
+alias g++='g++ -Wall '
+alias gcc='gcc -Wall '
+alias ll='ls -alG'
+alias ls='ls -G'
+alias la='ls -A'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+# }}}
+
+# LOCAL {{{
+if [ -e ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
+# }}}
+
+# vim:ts=4:sw=4 syntax=zsh

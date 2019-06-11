@@ -36,6 +36,8 @@ function setup_mac_setting() {
   link_file ${CHECKOUT_DIR}/dotfiles/etc/bash_color ~/.bash_color
   link_file ${CHECKOUT_DIR}/dotfiles/etc/bash_function ~/.bash_function
   link_file ${CHECKOUT_DIR}/dotfiles/etc/bash_sharehistory ~/.bash_sharehistory
+  link_file ${CHECKOUT_DIR}/dotfiles/etc/zshenv.mac ~/.zshenv
+  link_file ${CHECKOUT_DIR}/dotfiles/etc/zshrc.mac ~/.zshrc
   link_file ${CHECKOUT_DIR}/dotfiles/etc/gitconfig ~/.gitconfig
   link_file ${CHECKOUT_DIR}/dotfiles/etc/vimrc ~/.vimrc
 }
