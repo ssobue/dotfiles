@@ -34,8 +34,8 @@ SAVEHIST=10000
 # }}}
 
 # PROMPT {{{
-PROMPT='%F{green}$(date "+%Y/%m/%d %H:%M:%S") %n@%m'
-RPROMPT='%B%F{green}[%d]%f%b'
+PROMPT='%F{red}$(date "+%Y/%m/%d %H:%M:%S") %n@%m'
+RPROMPT='%B%F{red}[%d]%f%b'
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
