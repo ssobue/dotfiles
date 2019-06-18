@@ -1,0 +1,78 @@
+# zsh setting
+
+# DEFAULT {{{
+if [ -e /etc/zshrc ]; then
+    source /etc/zshrc
+fi
+# }}}
+
+# KEYBIND {{{
+bindkey -e
+stty erase "^?"
+# }}}
+
+# COLOR {{{
+autoload -Uz colors
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+colors
+# }}}
+
+# COMPLEMENT {{{
+autoload -Uz compinit; compinit
+# }}}
+
+# COMMAND_HISTORY {{{
+setopt share_history
+setopt hist_ignore_dups
+setopt pushd_ignore_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+# }}}
+
+# PROMPT {{{
+PROMPT='%F{green}$(date "+%Y/%m/%d %H:%M:%S") %n@%m'
+RPROMPT='%B%F{green}[%d]%f%b'
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+PROMPT=$PROMPT' ${vcs_info_msg_0_}''%F{green}%#%f '
+# }}}
+
+# ALIASES {{{
+alias date="env LC_ALL=c date"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
+alias g++='g++ -Wall '
+alias gcc='gcc -Wall '
+alias l.='ls -d .* --color=auto'
+alias la='ls -A'
+alias ll='ls -al --color=auto'
+alias ls='ls --color=auto'
+alias history='history -i '
+# }}}
+
+# OPTIONS {{{
+setopt print_eight_bit
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt correct
+# }}}
+
+# LOCAL {{{
+if [ -e ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
+# }}}
+
+# vim:ts=4:sw=4 syntax=zsh
