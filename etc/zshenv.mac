@@ -5,6 +5,6 @@ export EDITOR=/usr/local/bin/vim
 export GIT_SSH=/usr/bin/ssh
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
-export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+export PATH="/usr/local/opt/gpg-agent/bin:/usr/local/sbin:$PATH"
 
 # vim:ts=4:sw=4 syntax=zsh
