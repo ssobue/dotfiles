@@ -35,8 +35,8 @@ SAVEHIST=10000
 # }}}
 
 # PROMPT {{{
-PROMPT='%F{green}$(date "+%Y/%m/%d %H:%M:%S") %n@%m'
-RPROMPT='%B%F{green}[%d]%f%b'
+PROMPT='%F{red}$(date "+%Y/%m/%d %H:%M:%S") %n@%m'
+RPROMPT='%B%F{red}[%d]%f%b'
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
@@ -45,7 +45,7 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-PROMPT=$PROMPT' ${vcs_info_msg_0_}''%F{green}%#%f '
+PROMPT=$PROMPT' ${vcs_info_msg_0_}''%F{red}%#%f '
 # }}}
 
 # ALIASES {{{
