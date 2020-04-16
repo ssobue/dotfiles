@@ -1,7 +1,7 @@
 [user]
-	name = Sho Sobue
-	email = meru26.sho@gmail.com
-	signingkey = F298A6F3964A59A84D4F0263330E318E67744E8D
+	name = SOBUE Sho
+	email = sho@sobue.dev
+	signingkey = 74E651EFFE0FC4967713FCD9606D3BAE8D84FC7F
 [fetch]
 	prune = true
 [url "git@github.com:"]
@@ -11,7 +11,7 @@
 	status = auto
 	branch = auto
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /usr/local/MacGPG2/bin/gpg
 [commit]
 	gpgsign = true
 [alias]
