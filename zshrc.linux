@@ -55,8 +55,6 @@ alias mv="mv -iv"
 alias rm="rm -iv"
 alias g++='g++ -Wall '
 alias gcc='gcc -Wall '
-alias l.='ls -d .* --color=auto'
-alias la='ls -A'
 alias ll='ls -al --color=auto'
 alias ls='ls --color=auto'
 alias history='history -i '

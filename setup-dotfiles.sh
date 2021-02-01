@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 CHECKOUT_DIR=~/src
 CHECKOUT_REPOSITORY="dotfiles"
@@ -19,6 +19,7 @@ function setup_clone_dir() {
     mkdir "${CHECKOUT_DIR}"
   fi
 
+  # shellcheck disable=SC2164
   cd "${CHECKOUT_DIR}"
 
   for REPO in ${CHECKOUT_REPOSITORY}; do
@@ -29,17 +30,17 @@ function setup_clone_dir() {
 }
 
 function setup_mac_setting() {
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/zshenv.mac ~/.zshenv
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/zshrc.mac ~/.zshrc
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/gitconfig ~/.gitconfig
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/vimrc ~/.vimrc
+  link_file ${CHECKOUT_DIR}/dotfiles/zshenv.mac ~/.zshenv
+  link_file ${CHECKOUT_DIR}/dotfiles/zshrc.mac ~/.zshrc
+  link_file ${CHECKOUT_DIR}/dotfiles/gitconfig ~/.gitconfig
+  link_file ${CHECKOUT_DIR}/dotfiles/vimrc ~/.vimrc
 }
 
 function setup_linux_setting() {
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/zshenv.linux ~/.zshenv
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/zshrc.linux ~/.zshrc
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/gitconfig ~/.gitconfig
-  link_file ${CHECKOUT_DIR}/dotfiles/etc/vimrc ~/.vimrc
+  link_file ${CHECKOUT_DIR}/dotfiles/zshenv.linux ~/.zshenv
+  link_file ${CHECKOUT_DIR}/dotfiles/zshrc.linux ~/.zshrc
+  link_file ${CHECKOUT_DIR}/dotfiles/gitconfig ~/.gitconfig
+  link_file ${CHECKOUT_DIR}/dotfiles/vimrc ~/.vimrc
 }
 
 # check git command
