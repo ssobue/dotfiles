@@ -2,25 +2,17 @@
 	name = SOBUE Sho
 	email = sho@sobue.dev
 	signingkey = 74E651EFFE0FC4967713FCD9606D3BAE8D84FC7F
-[fetch]
-	prune = true
-[url "git@github.com:"]
-	pushinsteadof = https://github.com/
-[color]
-	diff = auto
-	status = auto
-	branch = auto
-[gpg]
-	program = /usr/local/bin/gpg
-[commit]
-	gpgsign = true
-[alias]
-	open = browse-remote
-	open-pr = browse-remote --pr
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [init]
 	defaultBranch = main
+[fetch]
+	prune = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
+[url "git@github.com:"]
+	pushinsteadof = https://github.com/
+[credential "https://github.com"]
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/local/bin/gh auth git-credential
