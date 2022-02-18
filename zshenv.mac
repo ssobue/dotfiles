@@ -3,7 +3,7 @@ export LANG=ja_JP.UTF-8
 export LC_LANG=ja_JP.UTF-8
 export EDITOR=/usr/local/bin/vim
 export GIT_SSH=/usr/bin/ssh
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 
 export PATH="/usr/local/sbin:$PATH"
 
