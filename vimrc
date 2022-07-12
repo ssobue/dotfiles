@@ -1,5 +1,5 @@
 " setting (referenced by https://qiita.com/morikooooo/items/9fd41bcd8d1ce9170301)
-colorscheme delek
+"colorscheme delek
 set nocompatible
 filetype off
 
