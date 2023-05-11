@@ -1,6 +1,6 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-CHECKOUT_DIR=~/src
+CHECKOUT_DIR="${HOME}/src"
 CHECKOUT_REPOSITORY="dotfiles"
 
 function link_file() {
@@ -24,23 +24,23 @@ function setup_clone_dir() {
 
   for REPO in ${CHECKOUT_REPOSITORY}; do
     if [[ ! -d "${REPO}" ]]; then
-      git clone https://github.com/ssobue/${REPO}.git
+      git clone "https://github.com/ssobue/${REPO}.git"
     fi
   done
 }
 
 function setup_mac_setting() {
-  link_file ${CHECKOUT_DIR}/dotfiles/zshenv.mac ~/.zshenv
-  link_file ${CHECKOUT_DIR}/dotfiles/zshrc.mac ~/.zshrc
-  link_file ${CHECKOUT_DIR}/dotfiles/gitconfig ~/.gitconfig
-  link_file ${CHECKOUT_DIR}/dotfiles/vimrc ~/.vimrc
+  link_file "${CHECKOUT_DIR}/dotfiles/zshenv.mac" "${HOME}/.zshenv"
+  link_file "${CHECKOUT_DIR}/dotfiles/zshrc.mac"  "${HOME}/.zshrc"
+  link_file "${CHECKOUT_DIR}/dotfiles/gitconfig"  "${HOME}/.gitconfig"
+  link_file "${CHECKOUT_DIR}/dotfiles/vimrc"      "${HOME}/.vimrc"
 }
 
 function setup_linux_setting() {
-  link_file ${CHECKOUT_DIR}/dotfiles/zshenv.linux ~/.zshenv
-  link_file ${CHECKOUT_DIR}/dotfiles/zshrc.linux ~/.zshrc
-  link_file ${CHECKOUT_DIR}/dotfiles/gitconfig ~/.gitconfig
-  link_file ${CHECKOUT_DIR}/dotfiles/vimrc ~/.vimrc
+  link_file "${CHECKOUT_DIR}/dotfiles/zshenv.linux" "${HOME}/.zshenv"
+  link_file "${CHECKOUT_DIR}/dotfiles/zshrc.linux"  "${HOME}/.zshrc"
+  link_file "${CHECKOUT_DIR}/dotfiles/gitconfig"    "${HOME}/.gitconfig"
+  link_file "${CHECKOUT_DIR}/dotfiles/vimrc"        "${HOME}/.vimrc"
 }
 
 # check git command
