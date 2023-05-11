@@ -12,6 +12,8 @@
 	program = /usr/local/bin/gpg
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
+[url "git@gist.github.com:"]
+	pushinsteadof = https://gist.github.com/
 [credential "https://github.com"]
 	helper = !/usr/local/bin/gh auth git-credential
 [credential "https://gist.github.com"]
