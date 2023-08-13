@@ -1,7 +1,7 @@
 [user]
 	name = SOBUE Sho
-	email = sho@sobue.name
-	signingkey = 654F6C50C886A09ED932525F84A2E883076A15A9
+	email = sho@sobue.dev
+	signingkey = 60D63770D7B30950661B9A6CF97FBE9ABE88EFE1
 [init]
 	defaultBranch = main
 [fetch]
