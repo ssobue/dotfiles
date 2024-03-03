@@ -1,7 +1,7 @@
 [user]
 	name = SOBUE Sho
 	email = sho@sobue.dev
-	signingkey = 60D63770D7B30950661B9A6CF97FBE9ABE88EFE1
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICCD6Y384vw7SS5SgyWHAR+fv03J4W8m5UuDVtSqPAIq
 [init]
 	defaultBranch = main
 [fetch]
@@ -9,7 +9,9 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
 [url "git@gist.github.com:"]
